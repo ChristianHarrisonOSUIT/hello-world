@@ -1,0 +1,159 @@
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+import Turtle
+Traceback (most recent call last):
+  File "<pyshell#0>", line 1, in <module>
+    import Turtle
+ModuleNotFoundError: No module named 'Turtle'
+from turtle import Turtle
+import math
+>>> def drawCircle(t, x, y, radius):
+...     t.up()
+...     t.setposition(x, y)
+...     f.forward(radius)
+...     t.left(90)
+...     t.down()
+...     forDist = ((2 * math.pi * radius) / 120)
+...     i = 0
+...     while i <= 120:
+...         t.left(3)
+...         t.forward(forDist)
+...         i += 1
+... 
+...         
+>>> def main():
+...     t = turtle.Turtle()
+...     x = 50
+...     y = 75
+...     radius = 100
+...     drawCircle(t, x, y, radius)
+... 
+...     
+>>> main()
+Traceback (most recent call last):
+  File "<pyshell#23>", line 1, in <module>
+    main()
+  File "<pyshell#22>", line 2, in main
+    t = turtle.Turtle()
+NameError: name 'turtle' is not defined. Did you mean: 'Turtle'?
+>>> def main():
+...     t = Turtle()
+...     x = 50
+...     y = 75
+...     radius = 100
+...     drawCircle(t, x, y, radius)
+... 
+...     
+>>> main()
+Traceback (most recent call last):
+  File "<pyshell#31>", line 1, in <module>
+    main()
+  File "<pyshell#30>", line 6, in main
+    drawCircle(t, x, y, radius)
+  File "<pyshell#15>", line 4, in drawCircle
+    f.forward(radius)
+NameError: name 'f' is not defined
+
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> from turtle import Turtle
+>>> import random
+>>> colors = ["red", "green", "blue", "orange", "purple", "pink", "yellow", "black", "brown"]
+>>> def cCurve(t, x1, y1, x2, y2, level):
+...     def drawline(x1, y1, x2, y2):
+...         """Draws a line segment between the endpoints."""
+...         color = random.choice(colors)
+...         t.color(color)
+...         t.up()
+...         t.goto(x1, y1)
+...         t.down()
+...         t.goto(x2, y2)
+...         if level == 0:
+...             drawline(x1, y1, x2, y2)
+...         else:
+...             xm = (x1 + x2 + y1 - y2) // 2
+...             ym = (x2 + y1 + y2 - x1) // 2
+...             cCurve(t, x1, y1, xm, ym, level - 1)
+...             cCurve(t, xm, ym, x2, y2, level - 1)
+... 
+...             
+>>> def main():
+...     level = int(input("Enter the level (0 or greater): "))
+...     t = Turtle()
+...     t.hideturtle()
+...     cCurve(t, 50, -50, 50, 50, level)
+...     t.getscreen()._root.mainloop()
+... 
+...     
+>>> main()
+Enter the level (0 or greater): 5
+
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> from turtle Import Turtle
+SyntaxError: invalid syntax
+>>> from turtle import Turtle
+>>> import math
+>>> import sys
+>>> def drawKochFractal(width, height, size, level):
+...     """Draws a Koch fractal of the given level and size."""
+... 
+...     
+>>> t = Turtle()
+>>> t.hideturtle()
+>>> t.up()
+>>> t.goto(-width // 3, height // 4)
+Traceback (most recent call last):
+  File "<pyshell#13>", line 1, in <module>
+    t.goto(-width // 3, height // 4)
+NameError: name 'width' is not defined
+>>> def drawKochFractal(width, height, size, level):
+...     """Draws a Koch fractal of the given level and size."""
+...     t = Turtle()
+...     t.hideturtle()
+...     t.up()
+...     t.goto(-width // 3, height // 4)
+...     t.down()
+...     drawFractalLine(t, size, 0, level)
+...     drawFractalLine(t, size, -120, level)
+...     drawFractalLine(t, size, 120, level)
+...     def drawFractalLine(t, distance, theta, level):
+...         """Either draws a single line in a given direction or four fractal lines in new directions."""
+...         if (level == 0):
+...             drawPolarLine(t, distance, theta)
+...         else:
+...             drawFractalLine(t, distance // 3, theta, level - 1)
+...             drawFractalLine(t, distance // 3, theta + 60, level - 1)
+...             drawFractalLine(t, distance // 3, theta - 60, level - 1)
+...             drawFractalLine(t, distance // 3, theta, level - 1)
+...     def drawPolarLine(t, distance, theta):
+...         """Moves the given distance in the given direction."""
+...         t.setheading(theta)
+...         t.forward(distance)
+... 
+...         
+>>> def main():
+...     level = int(input("Enter the level: "))
+...     drawKochFractal(200, 200, 150, level)
+... 
+...     
+>>> main()
+Enter the level: 7
+Traceback (most recent call last):
+  File "<pyshell#42>", line 1, in <module>
+    main()
+  File "<pyshell#41>", line 3, in main
+    drawKochFractal(200, 200, 150, level)
+  File "<pyshell#37>", line 3, in drawKochFractal
+    t = Turtle()
+  File "C:\Users\RedTh\AppData\Local\Programs\Python\Python311\Lib\turtle.py", line 3831, in __init__
+    RawTurtle.__init__(self, Turtle._screen,
+  File "C:\Users\RedTh\AppData\Local\Programs\Python\Python311\Lib\turtle.py", line 2558, in __init__
+    self._update()
+  File "C:\Users\RedTh\AppData\Local\Programs\Python\Python311\Lib\turtle.py", line 2661, in _update
+    self._update_data()
+  File "C:\Users\RedTh\AppData\Local\Programs\Python\Python311\Lib\turtle.py", line 2647, in _update_data
+    self.screen._incrementudc()
+  File "C:\Users\RedTh\AppData\Local\Programs\Python\Python311\Lib\turtle.py", line 1293, in _incrementudc
+    raise Terminator
+turtle.Terminator
