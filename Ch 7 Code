@@ -1,0 +1,89 @@
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> def median(list):
+...     if len(list) == 0:
+...         return 0
+...     list.sort()
+...     midIndex = int(len(list) / 2)
+...     if len(list) % 2 == 1:
+...         return list[midIndex]
+...     else:
+...         return (list[midIndex] + list[midIndex - 1]) / 2
+... 
+...     
+>>> def mean(list):
+...     if len(list) == 0:
+...         return 0
+...     total = 0
+...     for number in list:
+...         total += number
+...     return total / len(list)
+... 
+>>> def mode(list)L
+SyntaxError: incomplete input
+>>> def mode(list):
+...     if len(list) == 0:
+...         return 0
+...     numberDictionary = ()
+...     for digit in list:
+...         number = numberDictionary.get(digit, None)
+...         if number == None:
+...             numberDictionary([digit] = 1
+...                              
+SyntaxError: expression cannot contain assignment, perhaps you meant "=="?
+>>> def mode(list):
+...     if len(list) == 0:
+...         return 0
+...     numberDictionary = ()
+...     for digit in list:
+...         number = numberDictionary.get(digit, None)
+...         if number == None:
+...             numberDictionary[digit] = 1
+...         else:
+...             numberDictionary[digit] = number + 1
+...     maxValue = max (numberDictionary.values())
+...     modeList = []
+...     for key in numberDictionary:
+...         if numberDictionary[key] == maxValue:
+...             modeList.append(key)
+...         return modeList
+... 
+...     
+>>> def main():
+...     list = [3, 1, 7, 1, 4, 4, 10]
+...     print("List:", list)
+...     print("Mode: ", mode(list))
+...     print("Median :", median(list))
+...     print("Mean: ", mean(list))
+... 
+...     
+>>> main()
+List: [3, 1, 7, 1, 4, 4, 10]
+Traceback (most recent call last):
+  File "<pyshell#44>", line 1, in <module>
+    main()
+  File "<pyshell#43>", line 4, in main
+    print("Mode: ", mode(list))
+  File "<pyshell#36>", line 6, in mode
+    number = numberDictionary.get(digit, None)
+AttributeError: 'tuple' object has no attribute 'get'
+
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> inpuyFileName = input('Enter the input file name: ')
+Enter the input file name: 
+>>> fin = open(inputFileName, "r")
+Traceback (most recent call last):
+  File "<pyshell#1>", line 1, in <module>
+    fin = open(inputFileName, "r")
+NameError: name 'inputFileName' is not defined. Did you mean: 'inpuyFileName'?
+>>> fileList = list()
+>>> for line in fin:
+...     line = iine.strip('\n')
+...     fileList.append(line)
+... 
+...     
+Traceback (most recent call last):
+  File "<pyshell#6>", line 1, in <module>
+    for line in fin:
+NameError: name 'fin' is not defined. Did you mean: 'bin'?
