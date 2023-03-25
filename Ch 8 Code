@@ -1,0 +1,104 @@
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> import math
+>>> tolerance=0.00001
+>>> estimate=1.0
+>>> def newton(num, estimate):
+...     estimate=(estimate+num/estimate)/2
+...     difference =abs(num-estimate**2)
+...     if difference <= tolerance:
+...         return estimate
+...     else:
+...         return newton(num, estimate)
+... 
+...     
+>>> def main():
+...     while True:
+...         try:
+...             x = float(input("Enter a positive number or enter/return to quit: "))
+...             print("The program's estimate: ", newton(x, estimate))
+...             print("Python's estimate: ", math.sqrt(x))
+...         except Exceptio as e:
+...             print(e)
+...             break
+... if __name__ == '__main__':
+...     
+SyntaxError: invalid syntax
+>>> if __name__ == '__main__'"
+SyntaxError: incomplete input
+>>> if __name__ == '__main__':
+...     main()
+... 
+...     
+Traceback (most recent call last):
+  File "<pyshell#24>", line 2, in <module>
+    main()
+NameError: name 'main' is not defined. Did you mean: 'min'?
+
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> import math
+>>> tolerance = 0.000001
+>>> def newton(x, estimate):
+...     estimate = (estimate + x / estimate) / 2
+...     difference = abs(x - estimate ** 2)
+...     if difference <= tolerance:
+...         return estimate
+...     else:
+...         return newton(x, estimate)
+... 
+...     
+>>> def main():
+...     while True:
+...         x = input("Enter a positive number or enter/return to quit: ")
+...         if x == "":
+...             break
+...         x = float(x)
+...         estimate = 1.0
+...         print("The program's estimate is", newton(x, estimate))
+...         print("Python's estimate is ", math.sqrt(x))
+... 
+...         
+>>> if __name__ == "__main__":
+...     main()
+... 
+...     
+Enter a positive number or enter/return to quit: 3
+The program's estimate is 1.7320508100147274
+Python's estimate is  1.7320508075688772
+
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> import math
+>>> tolerance = 0.000001
+>>> def newton(x, estimate =1):
+...     """
+... Returns the square root of x."
+... """
+...     difference = abs(x - estimate ** 2)
+...     if difference <= tolerance:
+...         return estimate
+...     else:
+...         return newton(x, (estimate + x / estimate) / 2)
+... 
+...     
+>>> def main():
+...     ""
+...     "Allows the user to obtain square roots."
+...     ""
+...     while True:
+...         x = input("Enter a positive number or enter/return to quit: ")
+...         if x == "":
+...             break
+...         x = float(x)
+...         print("The program's estimate is", newton(x, 1))
+...         print("Python's estimate is ", math.sqrt(x))
+... 
+...         
+>>> if __name__ == "__main__":
+...     main()
+... 
+...     
+Enter a positive number or enter/return to quit: 2
+The program's estimate is 1.4142135623746899
+Python's estimate is  1.4142135623730951
