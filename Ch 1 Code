@@ -1,0 +1,45 @@
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> 8
+8
+>>> 8 * 2
+16
+>>> 8 ** 2
+64
+>>> 8/12
+0.6666666666666666
+>>> 8//12
+0
+>>> 8/0
+Traceback (most recent call last):
+  File "<pyshell#5>", line 1, in <module>
+    8/0
+ZeroDivisionError: division by zero
+>>> name = input("Enter your name: ")
+Enter your name: Christian Harrison
+>>> name
+'Christian Harrison'
+>>> address = input("Enter your address: ")
+Enter your address: 14012 E 101st N, Owasso, OK
+>>> address
+'14012 E 101st N, Owasso, OK'
+>>> phone number = input("Enter your phone number: ")
+SyntaxError: invalid syntax
+>>> Phone = input("Enter your phone: ")
+Enter your phone: 9185006539
+>>> print(name + address + phone)
+Traceback (most recent call last):
+  File "<pyshell#12>", line 1, in <module>
+    print(name + address + phone)
+NameError: name 'phone' is not defined. Did you mean: 'Phone'?
+>>> print(name + address + Phone)
+Christian Harrison14012 E 101st N, Owasso, OK9185006539
+>>> print(name, address, Phone)
+Christian Harrison 14012 E 101st N, Owasso, OK 9185006539
+>>> print("Your name is", name)
+Your name is Christian Harrison
+width = int("Enter with width: "))
+height = int(input("Enter with weight: "))
+area = width * height
+print("The area is", area, "square units."))
+
