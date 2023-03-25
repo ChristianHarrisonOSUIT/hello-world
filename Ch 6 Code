@@ -1,0 +1,100 @@
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> message = input("Enter a message: ")
+Enter a message: Hello world!
+>>> distanceValue = int(input("Enter distance value: "))
+Enter distance value: 4
+>>> result = ""
+>>> for x in message:
+...     result += chr(ord(x)+distanceValue)
+...     print(""+result)
+... 
+...     
+L
+Li
+Lip
+Lipp
+Lipps
+Lipps$
+Lipps${
+Lipps${s
+Lipps${sv
+Lipps${svp
+Lipps${svph
+Lipps${svph%
+
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> codedText = input("Enter the coded text: ")
+Enter the coded text: Lipps${svph%
+>>> distanceValue = int(input("Enter the distance value: "))
+...                              
+Enter the distance value: 4
+>>> result = ""
+...                              
+>>> for ch in codedText:
+...     result += chr(ord(ch)-distanceValue)
+...                              print("" + result)
+...                              
+SyntaxError: unexpected indent
+>>> for ch in codedText:
+...                              result += chr(ord(ch)-distanceValue)
+...                              print("" + result)
+... 
+...                              
+H
+He
+Hel
+Hell
+Hello
+Hello 
+Hello w
+Hello wo
+Hello wor
+Hello worl
+Hello world
+Hello world!
+
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> infile = input("enter the input filename with extension ");
+enter the input filename with extension ameen.txt
+>>> outfile = input("enter the input filename with extension: ");
+enter the input filename with extension: babu.txt
+>>> f1 = open(infile, "r");
+Traceback (most recent call last):
+  File "<pyshell#2>", line 1, in <module>
+    f1 = open(infile, "r");
+FileNotFoundError: [Errno 2] No such file or directory: 'ameen.txt'
+
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> filename = input("Enter input filename: ")
+Enter input filename: Input
+>>> try:
+...     f = open(filename, 'r')
+...     except:
+...         
+SyntaxError: invalid syntax
+>>> try:
+...     f = open(filename, 'r')
+... except:
+...     print("Error opening file", filename)
+...     exit()
+... 
+...     
+Error opening file Input
+>>> print('{:<12s} {:>10s} {:>10s}'.format('Name', 'Hours', 'Total Pay'))
+Name              Hours  Total Pay
+>>> for line in f.readlines():
+...     name, hours, wage = line.split()
+...     hours = int(hours)
+...     wage = float(wage)
+...     total = hours * wage
+...     print('{:<12s} {:>10d} {:>10.2f}'.format(lname, hours, total))
+... 
+...     
+Traceback (most recent call last):
+  File "<pyshell#20>", line 1, in <module>
+    for line in f.readlines():
+NameError: name 'f' is not defined
