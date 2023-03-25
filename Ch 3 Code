@@ -1,0 +1,51 @@
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> TAX_RATE = 0.20
+>>> STANDARD_DEDUCTION = 10000.0
+>>> DEPENDENT_DEDUCTION = 3000.0
+>>> 
+>>> grossIncome = float(input("Enter the gross income "))
+Enter the gross income 120000
+>>> numDependents = int(input("Enter the number of dependents: "))
+Enter the number of dependents: 2
+>>> 
+>>> taxableIncome = grossIncome - STANDARD_DEDUCTION - DEPENDENT_DEDUCTION * numDepenends
+Traceback (most recent call last):
+  File "<pyshell#7>", line 1, in <module>
+    taxableIncome = grossIncome - STANDARD_DEDUCTION - DEPENDENT_DEDUCTION * numDepenends
+NameError: name 'numDepenends' is not defined. Did you mean: 'numDependents'?
+>>> incomeTax = taxableIncome * TAX_RATE
+Traceback (most recent call last):
+  File "<pyshell#8>", line 1, in <module>
+    incomeTax = taxableIncome * TAX_RATE
+NameError: name 'taxableIncome' is not defined
+>>> roundoff_incomeTax = round(incomeTax, 2)
+Traceback (most recent call last):
+  File "<pyshell#9>", line 1, in <module>
+    roundoff_incomeTax = round(incomeTax, 2)
+NameError: name 'incomeTax' is not defined
+>>> print("The income tax is $" + str(roundoff_incomeTax))
+Traceback (most recent call last):
+  File "<pyshell#10>", line 1, in <module>
+    print("The income tax is $" + str(roundoff_incomeTax))
+NameError: name 'roundoff_incomeTax' is not defined
+
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> light_speed = 300000000 #light speed declaration and storing value
+>>> total_seconds = 365*24*60*60
+>>> light_year = light_speed * total_seconds
+>>> print("Light travels ", light_year, "meters in a year.")
+Light travels  9460800000000000 meters in a year.
+
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> hWages = float(input("Enter hourly wage: "))
+Enter hourly wage: 150
+>>> rHours = float(input("Enter total number of regular hours: "))
+Enter total number of regular hours: 40
+>>> otHours = float(input("Enter overtime hours: "))
+Enter overtime hours: 5
+>>> weeklyPay = (hWages * rHours) + (1.5 * hWages * otHours)
+>>> print (weeklyPay)
+7125.0
