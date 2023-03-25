@@ -1,0 +1,52 @@
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> def isSorted(lyst):
+...     if len(lyst) >= 0 and len(lyst) < 2:
+...         return True
+...     else:
+...         for i in range(len(lyst)-1):
+...             if lyst[i] > lyst[i+1]:
+...                 return False
+...             return True
+... 
+...         
+>>> def main():
+...     lyst = []
+...     print(isSorted(lyst))
+...     lyst = [1]
+...     print(isSorted(lyst))
+...     lyst = list(range(10))
+...     print(isSorted(lyst))
+...     lyst[9] = 3
+...     print(isSorted(lyst))
+... 
+...     
+>>> main()
+True
+True
+True
+True
+
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> def printAll(seq):
+...     if seq:
+...         print(seq[0])
+...         printAll(seq[1:])
+... 
+...         
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> def main():
+...     filename = input('Enter the input file name: ')
+...     total, count = 0, 0
+...     with open(filename, 'r') as f:
+...         for line in f:
+...             for num in line.strip().split():
+...                 total += float(num)
+...                 count += 1
+...                 print('\nThe average is ' + str(total / count))
+... 
+...                 
+>>> main()
+
