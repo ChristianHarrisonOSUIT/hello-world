@@ -1,0 +1,112 @@
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> s1 = int(input("Enter the first side: "))
+Enter the first side: 3
+>>> s2 = int(input("Enter the second side: "))
+Enter the second side: 3
+>>> s3 = int(input("Enter the third side: "))
+Enter the third side: 5
+>>> if ((s1*s1 + s2*s2 == s3*s3) or (s2*s2 + s3*s3 = s1*s1) or (s3*s3 + s1*s1 == s2*s2)):
+...     
+SyntaxError: cannot assign to expression here. Maybe you meant '==' instead of '='?
+>>> if ((s1*s1 + s2*s2 == s3*s3) or (s2*s2 + s3*s3 == s1*s1) or (s3*s3 + s1*s1 == s2*s2)):
+...     print("The triangle is a right triangle.")
+... else:
+...     print("The triangle is not a right triangle.")
+... 
+...     
+The triangle is not a right triangle.
+
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> s1= int(input("Enter the first side: "))
+Enter the first side: 3
+>>> s2= int(input("Enter the second side: "))
+Enter the second side: 4
+>>> s3= int(input("Enter the third side: "))
+Enter the third side: 5
+>>> if ((s1*s1 + s2*s2 == s3*s3)or (s2*s2 + s3*s3 == s1*s1) or (s3*s3 + s1*s1 == s2*s2)):
+...     print("The triangle is a right triangle.")
+... else:
+...     print("The triangle is not a right triangle.")
+... 
+...     
+The triangle is a right triangle.
+
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> import math
+>>> smaller = int(input("Enter the smaller number: "))
+Enter the smaller number: 1
+>>> larger = int(input("Enter the larger number: "))
+Enter the larger number: 100
+>>> count = 0
+>>> maxGuesses = round(math.log(larger - smaller + 1, 2))
+>>> while True:
+...     count += 1
+...     print(smaller, larger)
+...     yourNumber = (smaller + larger) // 2
+...     print("Your number is", yourNumber)
+...     answer = input("Enter = , <, or >:")
+... 
+...     
+1 100
+Your number is 50
+Enter = , <, or >: =
+1 100
+Your number is 50
+Enter = , <, or >:
+1 100
+Your number is 50
+Enter = , <, or >:
+1 100
+Your number is 50
+Enter = , <, or >:
+1 100
+Your number is 50
+
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> purchasePrice = float(input("Enter the purchase price: "))
+Enter the purchase price: 1500
+>>> ANNUAL_INTEREST = 0.12
+>>> MONTHLY_RATE = 0.12/12
+>>> 
+>>> downPayment = purchasePrice * .1
+>>> origBalance = purchasePrice - downPayment
+>>> payment = origBalance * 0.05
+>>> 
+>>> print("Month", "Orig. Bal", "Monthly Interest", "Principal", "Payment", "New Bal.")
+Month Orig. Bal Monthly Interest Principal Payment New Bal.
+>>> month = 0
+>>> while origBalance > payment:
+...     month += 1
+...     interest = origBalance * MONTHLY_RATE
+...     principal = payment - interest
+...     newBalance = origBalance - principal
+...     print("%2d%16.2f%16.2f%18.2f%18.2f%15.2f" % (month, origBalance, interest, principal, payment, newBalance))
+...     origBalance = newBalance
+... 
+...     
+ 1         1350.00           13.50             54.00             67.50        1296.00
+ 2         1296.00           12.96             54.54             67.50        1241.46
+ 3         1241.46           12.41             55.09             67.50        1186.37
+ 4         1186.37           11.86             55.64             67.50        1130.74
+ 5         1130.74           11.31             56.19             67.50        1074.55
+ 6         1074.55           10.75             56.75             67.50        1017.79
+ 7         1017.79           10.18             57.32             67.50         960.47
+ 8          960.47            9.60             57.90             67.50         902.57
+ 9          902.57            9.03             58.47             67.50         844.10
+10          844.10            8.44             59.06             67.50         785.04
+11          785.04            7.85             59.65             67.50         725.39
+12          725.39            7.25             60.25             67.50         665.14
+13          665.14            6.65             60.85             67.50         604.30
+14          604.30            6.04             61.46             67.50         542.84
+15          542.84            5.43             62.07             67.50         480.77
+16          480.77            4.81             62.69             67.50         418.08
+17          418.08            4.18             63.32             67.50         354.76
+18          354.76            3.55             63.95             67.50         290.80
+19          290.80            2.91             64.59             67.50         226.21
+20          226.21            2.26             65.24             67.50         160.97
+21          160.97            1.61             65.89             67.50          95.08
+22           95.08            0.95             66.55             67.50          28.53
