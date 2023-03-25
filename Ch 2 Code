@@ -1,0 +1,67 @@
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> def area_surf_cube(side):
+...     return 6 * side * side
+... 
+>>> side=int(input("Enter the side of the cube : "))
+Enter the side of the cube : 5
+>>> result = area_surf_cube(side)
+>>> print("The surface of the cube is : " + str(result))
+The surface of the cube is : 150
+>>> 
+>>> side=int(input("Enter the side of the cube : "))
+Enter the side of the cube : 7.500
+Traceback (most recent call last):
+  File "<pyshell#7>", line 1, in <module>
+    side=int(input("Enter the side of the cube : "))
+ValueError: invalid literal for int() with base 10: '7.500'
+>>> result = area_surf_cube(side)
+>>> print("The surface of the cube is : " + str(result))
+The surface of the cube is : 150
+
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> videos = int(input("Enter the number of new videos: "))
+Enter the number of new videos: 3.00
+Traceback (most recent call last):
+  File "<pyshell#0>", line 1, in <module>
+    videos = int(input("Enter the number of new videos: "))
+ValueError: invalid literal for int() with base 10: '3.00'
+>>> videos = int(input("Enter the number of new videos: "))
+Enter the number of new videos: 3
+>>> oldies = int(input("Enter the number of oldies: "))
+Enter the number of oldies: 2
+>>> result = videos + oldies
+>>> print("The total cost is", "$", result)
+The total cost is $ 5
+
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> import math
+>>> radius = float(input("Radius = "))
+Radius = 
+Traceback (most recent call last):
+  File "<pyshell#1>", line 1, in <module>
+    radius = float(input("Radius = "))
+ValueError: could not convert string to float: ''
+>>> 
+>>> radius = float(input("Radius - "))
+Radius - 2
+>>> diameter = radius * 2
+>>> circumfrence = diameter *math.pi
+>>> surfaceArea = 4 math.pi radius * radius
+SyntaxError: invalid syntax
+>>> surfaceArea = 4 * radius * radius
+>>> volume = 4/3 radius radius
+SyntaxError: invalid syntax
+>>> volume = 4/3 * radius radius
+SyntaxError: incomplete input
+>>> volume = 4/3 * radius * radius
+>>> print("Diameter:", diameter)
+Diameter: 4.0
+>>> print("Circumfrence: ", circumfrence)
+Circumfrence:  12.566370614359172
+>>> print("Surface area: ", surfaceArea)
+Surface area:  16.0
+>>> print("Volume", volume)
+Volume 5.333333333333333
