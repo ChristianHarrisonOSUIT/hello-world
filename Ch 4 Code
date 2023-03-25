@@ -1,0 +1,87 @@
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> height = int(input("Enter the height from which the ball is dropped: "))
+Enter the height from which the ball is dropped: 10
+>>> bounceindex = float(input("Enter the bounciness index of the ball: "))
+Enter the bounciness index of the ball: 0.6
+>>> numberOfBounces = float(input("Enter the number of themes the ball is allowed to continue bouncing: "))
+Enter the number of themes the ball is allowed to continue bouncing: 25.6
+>>> 
+>>> distance = 0
+>>> 
+>>> while numberOfBounces > 0
+SyntaxError: incomplete input
+>>> while numberOfBounces > 0:
+...     distance = distance + height
+...     height = height * bounceIndex
+...     distance = distance + height
+...     numberOfBounces-= 1
+... 
+...     
+Traceback (most recent call last):
+  File "<pyshell#12>", line 3, in <module>
+    height = height * bounceIndex
+NameError: name 'bounceIndex' is not defined. Did you mean: 'bounceindex'?
+>>> while numberOfBounces > 0:
+...     distance = distance + height
+...     height = height * bounceindex
+...     distance = distance + height
+...     numberOfBounces-= 1
+... 
+...     
+>>> print("Total distance traveled is: ", distance, "units.")
+Total distance traveled is:  49.99993176730872 units.
+
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> 
+... x = 1
+... iteration=int(input("enter number of iteration:"))
+... s = 0
+... 
+... for i in range(iteration):
+... 
+...     
+...     if i % 2 == 0:
+...         s += 4/x
+...     else:
+... 
+...         
+...         s -= 4/x
+... 
+...     
+...     x += 2
+...     
+SyntaxError: multiple statements found while compiling a single statement
+
+Python 3.11.1 (tags/v3.11.1:a7a450f, Dec  6 2022, 19:58:39) [MSC v.1934 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> DOWN_PAYMENT_RATE = 0.10
+... ANNUAL_INTEREST_RATE = 0.12
+... MONTHLY_PAYMENTS_RATE = 0.05
+... 
+... purchasePrice = float(input("Enter the purchase price: "))
+... month = 1
+... startingBalance = purchasePrice - (purchasePrice*DOWN_PAYMENT_RATE)
+... payment = startingBalance * MONTHLY_PAYMENTS_RATE
+... monthly_interest_rate = ANNUAL_INTEREST_RATE/12
+... 
+... print("\n%s%19s%18s%19s%10s%17s" % ("Month", "Starting Balance", "Interest to Pay", "Principal to Pay", "Payment", "Ending Balance"))
+... while startingBalance > 0:
+... 
+...     if startingBalance < payment:
+...         principalToPay = startingBalance
+...         payment = startingBalance
+...         interestToPay = 0
+...     else:
+...         interestToPay = startingBalance * monthly_interest_rate
+...         principalToPay = payment - interestToPay
+...         
+...     endingBalance = startingBalance - principalToPay
+...     
+...     print("%2d%16.2f%16.2f%18.2f%18.2f%15.2f" % (month, startingBalance, interestToPay, principalToPay, payment, endingBalance))
+...     startingBalance = endingBalance
+...     month = month + 1
+...     
+SyntaxError: multiple statements found while compiling a single statement
+>>> 
